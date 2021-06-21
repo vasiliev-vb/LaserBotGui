@@ -20,7 +20,7 @@ public:
 
 signals:
     void position_received(struct position pos);
-    void connection_state_changed(bool attached);
+    void connection_state_changed(bool connected);
     void attached_changed(bool attached);
 
 private slots:

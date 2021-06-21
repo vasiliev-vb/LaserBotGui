@@ -100,7 +100,7 @@ T bswap(T val) {
 }
 void FanucSocket::on_readyread()
 {
-    struct statepos s;
+    struct statepos s = {};
     while(socket_.bytesAvailable() >= (qint64)sizeof(s))
     {
         size_t bytes_read = socket_.read(reinterpret_cast<char*>(&s), sizeof(s));
